@@ -5,7 +5,7 @@ import { HomePage } from '../pages/HomePage';
 import { UserSocialPage } from '../pages/UserSocialPage';
 
 export function AppRoutes() {
-  const isAuthenticated = true;
+  const isAuthenticated = false;
   return (
     <BrowserRouter>
       <Routes>
