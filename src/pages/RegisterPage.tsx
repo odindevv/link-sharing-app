@@ -1,11 +1,6 @@
 import { FormAuth } from '../components/auth/FormAuth';
-type TypeInputs = 'text' | 'password' | 'email';
+import type { Input } from '../types';
 
-interface Input {
-  title: string;
-  placeholder: string;
-  type: TypeInputs;
-}
 export function RegisterPage() {
   const inputs: Array<Input> = [
     {
