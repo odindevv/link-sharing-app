@@ -1,6 +1,6 @@
 # Link Sharing App - Database Schema
 
-This README provides an overview of the Firestore database schema for the Link Sharing App. The schema includes collections for users, links, and comments, detailing the structure and fields used in the application.
+This README provides an overview of the Firestore database schema for the Link Sharing App. The schema includes collections for users, links and detailing the structure and fields used in the application.
 
 ## Collections and Fields
 
@@ -20,18 +20,7 @@ This README provides an overview of the Firestore database schema for the Link S
 - **title**: `string` - Title of the link.
 - **url**: `string` - URL of the link.
 - **description**: `string` - Description of the link.
-- **tags**: `array of strings` - Tags to categorize the link.
 - **createdAt**: `timestamp` - The date and time when the link was created.
-- **likes**: `array of strings` - IDs of users who liked the link.
-- **commentsCount**: `number` - Number of comments on the link.
-
-### Comments
-
-- **commentId**: `string` - Unique ID of the comment.
-- **linkId**: `string` - Reference to the link the comment is associated with.
-- **userId**: `string` - Reference to the user who made the comment.
-- **content**: `string` - Content of the comment.
-- **createdAt**: `timestamp` - The date and time when the comment was created.
 
 ## Getting Started
 
@@ -60,10 +49,7 @@ This README provides an overview of the Firestore database schema for the Link S
   "title": "Interesting Article",
   "url": "https://example.com/article",
   "description": "An article about interesting tech trends.",
-  "tags": ["tech", "trends"],
   "createdAt": "2024-08-01T13:45:67Z",
-  "likes": ["user_id1", "user_id2"],
-  "commentsCount": 5
 }
 
 ```
