@@ -1,50 +1,73 @@
-# React + TypeScript + Vite
+# Link Sharing App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the Link Sharing App! This application allows users to share, view, and manage links. Built with React, TypeScript, and Vite, and integrated with Firebase for authentication and Firestore for data storage, this app provides a robust platform for sharing and interacting with links.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **User Authentication**: Secure login and registration using Firebase Authentication.
+- **Link Management**: Share, view, and filter links based on title, tags, or user.
+- **Detailed Link View**: View detailed information about each link including title, description, URL, tags, and comments.
+- **Commenting and Liking**: Users can comment on and like links.
+- **User Profiles**: Manage user profiles and view shared links.
+- **Tagging System**: Categorize and filter links by tags.
+- **Notifications** (Optional): Alert users when someone comments on or likes their links.
 
-## Expanding the ESLint configuration
+## Project Setup
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Development Environment
 
-- Configure the top-level `parserOptions` property like this:
+1. **Set up the development environment** using React, TypeScript, and Vite.
+2. **Install and configure Firebase/Firestore** for authentication and data management.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Authentication
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. **Implement Firebase Authentication** for user login and registration.
+2. **Create components** such as Login, Register, and Profile.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Home Page
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. **Display a list of links** shared by users.
+2. **Implement filtering and search functionality** by title, tags, or user.
+
+### Create/Share Link Component
+
+1. **Create a form** for users to share new links.
+2. **Save links** to the `links` collection in Firestore.
+
+### Link Visualization
+
+1. **Create a detail page** for each link to show title, description, URL, tags, and comments.
+2. **Allow users to like and comment** on links.
+
+### Comments
+
+1. **Implement comment functionality** for links.
+2. **Display comments** on the link detail page.
+
+### User Profile
+
+1. **Create a profile page** showing the user’s shared links and basic information.
+2. **Allow users to edit their profile**.
+
+### Tags System
+
+1. **Implement a tagging system** to categorize links.
+2. **Enable filtering** of links by tags.
+
+### Notifications (Optional)
+
+1. **Add notifications** to inform users when someone comments on or likes their links.
+
+### Testing and Optimization
+
+1. **Perform testing** on components and functionalities.
+2. **Optimize the application** for performance and accessibility.
+
+## Getting Started
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/link-sharing-app.git
+   ```
