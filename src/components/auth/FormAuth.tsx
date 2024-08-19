@@ -1,25 +1,13 @@
 import { Link } from 'react-router-dom';
 
-type Units = 'px' | '%';
-
-type widthForm = `${number}${Units}`;
-type heightForm = `${number}${Units}`;
-
-type titleForm = 'Login' | 'Register';
-
-type buttonSubmit = 'Log in' | 'Create new account';
-
-type paragraphForm =
-  | 'Add your details below to get back into the app'
-  | 'Lets get you started sharing your links!';
-
-type TypeInputs = 'text' | 'password' | 'email';
-
-interface Input {
-  title: string;
-  placeholder: string;
-  type: TypeInputs;
-}
+import type {
+  Input,
+  widthForm,
+  heightForm,
+  titleForm,
+  buttonSubmit,
+  paragraphForm,
+} from '../../types';
 
 import { InputAuth } from './InputAuth';
 import { LabelAuth } from './LabelAuth';

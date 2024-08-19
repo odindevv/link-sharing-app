@@ -1,10 +1,4 @@
-type TypeInputs = 'text' | 'password' | 'email';
-
-interface Input {
-  title: string;
-  placeholder: string;
-  type: TypeInputs;
-}
+import { Input } from '../../types';
 
 interface InputFieldProps {
   input: Input;
