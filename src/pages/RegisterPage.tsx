@@ -4,16 +4,19 @@ import type { Input } from '../types';
 export function RegisterPage() {
   const inputs: Array<Input> = [
     {
+      name: '[Email] Register',
       title: 'Email address',
       type: 'email',
       placeholder: 'e.g. odin@gmail.com',
     },
     {
+      name: '[Password] Register',
       title: 'Password',
       type: 'password',
       placeholder: 'At least 8 characters',
     },
     {
+      name: '[Password Confirm] Register',
       title: 'Confirm password',
       type: 'password',
       placeholder: 'At least 8 characters',

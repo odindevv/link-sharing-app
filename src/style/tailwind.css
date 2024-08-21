@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.input-form {
+  @apply border-2;
+  @apply border-gray-300/70;
+  @apply p-4 rounded-lg;
+  @apply w-[95%];
+  @apply h-12;
+  @apply text-lg;
+  @apply outline-purple-700;
+}
