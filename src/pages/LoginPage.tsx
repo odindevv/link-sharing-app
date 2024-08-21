@@ -5,11 +5,13 @@ import type { Input } from '../types';
 export function LoginPage() {
   const inputs: Array<Input> = [
     {
+      name: '[Email] Login',
       title: 'Email address',
       type: 'email',
       placeholder: 'e.g. odin@gmail.com',
     },
     {
+      name: '[Password] Login',
       title: 'Password',
       type: 'password',
       placeholder: 'Enter your password',

@@ -2,14 +2,23 @@ import { Input } from '../../types';
 
 interface InputFieldProps {
   input: Input;
+  value: string;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
-export const InputAuth: React.FC<InputFieldProps> = ({ input }) => {
+export const InputAuth: React.FC<InputFieldProps> = ({
+  input,
+  value,
+  onChange,
+}) => {
   return (
     <input
-      className='border-2 border-gray-300/70 p-4 rounded-lg w-[95%] h-12 text-lg outline-purple-700'
+      className='input-form'
       type={input.type}
       placeholder={input.placeholder}
       id={input.title}
+      name={input.name}
+      value={value}
+      onChange={onChange}
     />
   );
 };
