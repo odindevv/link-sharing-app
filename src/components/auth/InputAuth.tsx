@@ -12,7 +12,7 @@ export const InputAuth: React.FC<InputFieldProps> = ({
 }) => {
   return (
     <input
-      className='input-form'
+      className='w-[95%] h-12 input-form'
       type={input.type}
       placeholder={input.placeholder}
       id={input.title}
