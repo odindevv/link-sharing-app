@@ -10,14 +10,14 @@ export const LinksSection = ({}) => {
           alt=''
         />
       </picture>
-      <div className='flex flex-col flex-1 space-y-4 bg-white px-6 py-8 rounded-md'>
+      <div className='flex flex-col flex-1 space-y-4 bg-white px-6 py-8 rounded-md h-full'>
         <div className='space-y-4 pb-6'>
           <h1 className='font-bold text-3xl text-gray-600'>
             Customize your links
           </h1>
           <p className='text-sm gray'>
             Add/edit/remove links below and then share all your profiles with
-            the world!
+            the world!das
           </p>
         </div>
         <div className='flex flex-col space-y-8'>

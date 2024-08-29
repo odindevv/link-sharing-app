@@ -3,14 +3,7 @@ import { logoutThunk } from '../../redux/thunks/auth.thunk';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../redux/store';
 
-type Section = 'Links' | 'Details' | 'Preview';
-
-interface Props {
-  section: Section;
-  setSection: (newSection: Section) => void;
-}
-
-export const NavBar: React.FC<Props> = ({ section, setSection }) => {
+export const NavBar = ({}) => {
   const dispatch: AppDispatch = useDispatch();
 
   const handleLogout = () => {
@@ -32,48 +25,27 @@ export const NavBar: React.FC<Props> = ({ section, setSection }) => {
       </Link>
 
       <div className='flex items-center space-x-8 font-semibold'>
-        <div className='flex items-center space-x-2 cursor-pointer'>
-          <i
-            className={`fa-link fas ${
-              section === 'Links' ? 'text-purple-600' : 'text-gray-600'
-            }`}
-            onClick={() => setSection('Links')}
-          ></i>
-          <h4
-            className={`md:block hidden  ${
-              section === 'Links' ? 'text-purple-600' : 'text-gray-600'
-            }`}
-            onClick={() => setSection('Links')}
-          >
-            Links
-          </h4>
-        </div>
-        <div className='flex items-center space-x-2 cursor-pointer'>
-          <i
-            className={`fa-user fas ${
-              section === 'Details' ? 'text-purple-600' : 'text-gray-600'
-            }`}
-            onClick={() => setSection('Details')}
-          ></i>
-          <h4
-            className={`md:block hidden  ${
-              section === 'Details' ? 'text-purple-600' : 'text-gray-600'
-            }`}
-            onClick={() => setSection('Details')}
-          >
-            Profile Details
-          </h4>
-        </div>
-        <div className='flex items-center space-x-2 cursor-pointer'>
+        <Link
+          to='/links'
+          className='flex items-center space-x-2 cursor-pointer'
+        >
+          <i className={`fa-link fas`}></i>
+          <h4 className='md:block hidden'>Links</h4>
+        </Link>
+        <Link
+          to='/details'
+          className='flex items-center space-x-2 cursor-pointer'
+        >
+          <i className='text-gray-600 fa-user fas'></i>
+          <h4 className='md:block hidden'>Profile</h4>
+        </Link>
+        <Link
+          to='/preview'
+          className='flex items-center space-x-2 cursor-pointer'
+        >
           <i className='text-gray-600 fa-eye fas'></i>
-          <h4
-            className={`md:block hidden  ${
-              section === 'Preview' ? 'text-purple-600' : 'text-gray-600'
-            }`}
-          >
-            Preview
-          </h4>
-        </div>
+          <h4 className='md:block hidden'>Preview</h4>
+        </Link>
       </div>
       <div className='cursor-pointer'>
         <i

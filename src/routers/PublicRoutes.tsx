@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { Link, Navigate, Route, Routes } from 'react-router-dom';
 import { LoginPage } from '../pages/LoginPage';
 import { RegisterPage } from '../pages/RegisterPage';
 
@@ -12,11 +12,14 @@ export const PublicRoutes: React.FC<Props> = ({ isAuthenticated }) => {
   }
   return (
     <div className='flex flex-col justify-center items-center space-y-8 bg-slate-200/60 min-h-screen'>
-      <img
-        src='/logo-devlinks-large.svg'
-        className='relative top-4 inset-0 w-[250px]'
-        alt=''
-      />
+      <Link to='/'>
+        <img
+          src='/logo-devlinks-large.svg'
+          className='relative top-4 inset-0 w-[250px]'
+          alt='DevLinks Logo'
+        />
+      </Link>
+
       <Routes>
         <Route
           path='/login'
